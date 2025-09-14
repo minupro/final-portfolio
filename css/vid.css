@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  background: url('your-background.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+video, canvas {
+  display: none; /* hide original video */
+}
