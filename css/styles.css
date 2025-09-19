@@ -161,49 +161,37 @@ html{
   }
 }
 
-
-.text{
-    margin-left:-500px;
+.about {
+  position: relative;
+  width: 100%;        /* Ensure section spans full width */
+  height: 80vh;      /* Full viewport height */
+  overflow: hidden;
+  background:#000000;  /* Hide any overflow */
 }
 
-
-.about_me{
-    color:aliceblue;
-    font-family:Arial, Helvetica, sans-serif;
-    margin-top:500px;
+.about-content{
+   display:flex;
+   flex-direction:column;
+   margin-left:800px;
+   margin-top:-600px;
 }
 
+.about-content h1{
+  font-size:80px;
 
-.about{
-    margin-top:-600px;
+  background: linear-gradient(270deg, #2196f3, #00ffcc, #ff00ff);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 5s ease infinite;
 }
 
-.global{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    z-index: var(--blur);
-    mix-blend-mode: lighten;
-    margin-bottom:500px;
-  }
-.loading-text {
-	place-self: center;
-	background: linear-gradient(90deg, #00f, #0ff, #00f) -100%/ 200%;
-	/* being excessively careful with compat,
-	 * though this has been supported unprefixed and
-	 * in the shorthand across major browsers for a while */
-	-webkit-background-clip: text;
-	        background-clip: text;
-	/* use color, don't use -webkit-text-fill-color anymore,
-	 * was meant to solve a problem we haven't had in years */
-	color: transparent;
-	font: 900 clamp(2em, 10vw, 10em) exo, sans-serif;
-	animation: shimmer 2s linear infinite
+.about-content p{
+  font-size:20px;
 }
 
-@keyframes shimmer { to { background-position: 100% } }
-html, body { display: grid }
-html { height: 100% }
-body { background: #222 }
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
