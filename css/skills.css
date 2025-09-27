@@ -1,113 +1,92 @@
-/* Reset everything */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.skill-section{
+  font-family:"Roboto", sans-serif;
 }
 
-html, body {
-  width: 100%;
-  overflow-x: hidden; /* stop horizontal scroll */
-  background: #0d1117; /* dark background */
-  font-family: sans-serif;
+.skillh1{
+  text-align:center;
+  color:#0084d7;
+  margin-bottom:2rem;
+  font-size:6.5rem;
+  letter-spacing:0.1rem;
 }
-
-/* Skills Section */
-.skills {
-  text-align: center;
-  padding: 50px 20px;
-  max-width: 1200px;   /* keeps content centered */
-  margin: 0 auto;      /* center horizontally */
-  color: white;
-  margin-right:534px;
-}
-
-.skills h1 {
-  font-size: 5rem;
-  margin-bottom: 30px;
-  color:rgb(0, 165, 236);
-  margin-left:500px;
+.inner{
+  padding-top:20px;
 
 }
 
-/* Skills Grid */
-.skills-grid {
-  display: flex; /* 👈 this is what makes the grid */
-  grid-auto-flow: column;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+.header{
+  text-align:center;
+  color:#fff;
+  padding-bottom:1rem;
+  position:relative;
+}
 
-  gap: 20px;
-  justify-items: center;
-  width: 50%;
-   grid-template-rows: repeat(4, 100px);
+.header::after{
+  content:'';
+  position:absolute;
+  width:100px;
+  height:4px;
+  background-color:dodgerblue;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  background-color:dodgerblue;
+}
+
+.Container{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  grid-gap:2rem;
+  padding:1rem 80px;
+  font-size:1.2rem;
+
+
+
+}
+
+.skill-box{
+  padding:1rem;
+  color:#ddd;
+  cursor:pointer;
+  border-radius:15px;
+  box-shadow:0 0 100px rgb(6, 125, 117);
+  background-color:rgb(8, 7, 7);
+
+}
+.skill-box:hover{
+  background:linear-gradient(45deg, #01183a, #052765);
+  color:#fff;
+  transform:translateY(-50px);
+  box-shadow:0 0 20px #0084d7, 0 0 40px #a2a4a6, 0 0 60px #0084d7, 0 0 80px #0084d7;
+  transition:0.5s;
+}
+.skill-name{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:0.5rem;
+  margin-bottom:0.5rem;
+
+
+
 }
 
 
-/* Skill Card */
-.skill {
-  background: #161b22;
-  border-radius: 20px;
-  padding: 40px;
-  width: 500px;
-  height: 200px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+.img{
+  width:200px;
+  height:200px;
+  position:relative;
+  border-radius:45px;
+  background:transparent;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 
-.skill img {
-  max-width: 90px;
-  height: 90px;
-  margin-bottom: 10px;
-  display: flex;
 }
-
-.skill p {
-  margin: 0;
-  font-size: 0.9rem;
-}
-
-.skill:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-}
-
-.skill:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 8px 25px 8px rgba(0, 200, 255, 0.5);
-}
-.skill:hover {
-  border: 2px solid #00f7ff;
-  box-shadow: 0 0 15px #00f7ff, 0 0 30px #00f7ff;
-}
-.skill:hover {
-  transform: translateY(-12px) scale(1.08);
-  border: 2px solid #00f7ff;
-  box-shadow: 0 0 15px #00f7ff, 0 0 30px #00f7ff, 0 0 45px #00f7ff;
-}
-
-/* Spin + zoom icon */
-.skill:hover img {
-  transform: rotate(360deg) scale(1.2);
-}
-
-/* Neon glow text */
-
-
-/* ✅ Responsive Breakpoints */
-@media (max-width: 1024px) { /* Tablets */
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-}
-
-@media (max-width: 768px) { /* Small tablets / big phones */
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) { /* Mobile */
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
+.icon{
+  width:100px;
 }
